@@ -9,7 +9,7 @@ import { AuthService } from 'src/app/auth/auth.service';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  title = 'FootballManager';
+  title = 'Apéro Club';
   isLoggedIn = false;
 
   constructor(

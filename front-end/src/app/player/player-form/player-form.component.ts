@@ -32,6 +32,7 @@ export class PlayerFormComponent implements OnInit {
       nationality: new FormControl(undefined),
       image: new FormControl(undefined),
       poste: new FormControl(undefined),
+      description: new FormControl(undefined)
     });
 
     this.initFields();
@@ -53,6 +54,7 @@ export class PlayerFormComponent implements OnInit {
     this.player.nationality = this.controls['nationality'].value;
     this.player.poste = this.controls['poste'].value;
     this.player.image = this.controls['image'].value;
+    this.player.description = this.controls['description'].value;
 
     if (this.isEditMode) {
       confirm('Are you sure you want to update this player?')
@@ -80,18 +82,20 @@ export class PlayerFormComponent implements OnInit {
           nationality: new FormControl(this.player.nationality, Validators.required),
           image: new FormControl(this.player.image),
           poste: new FormControl(this.player.poste, Validators.required),
+          description: new FormControl(this.player.description, Validators.required),
         });
       } else {
         this.isEditMode = false;
         const maxId = players.length > 0 ? Math.max(...players.map(p => p.id)) : 0;
         const newId = maxId + 1;
-        this.player = new Player(newId, '', 0, '', '', '');
+        this.player = new Player(newId, '', 0, '', '', '', '');
         this.playerForm = this.formBuilder.group({
           name: new FormControl(this.player.name, Validators.required),
           age: new FormControl(this.player.age, Validators.required),
           nationality: new FormControl(this.player.nationality, Validators.required),
           image: new FormControl(this.player.image),
           poste: new FormControl(this.player.poste, Validators.required),
+          description: new FormControl(this.player.description, Validators.required)
         });
       }
     });

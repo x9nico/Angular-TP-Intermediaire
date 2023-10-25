@@ -4,5 +4,6 @@ export interface IPlayer {
     age: number,
     nationality: string,
     poste: string,
-    image: string
+    image: string,
+    description: string
   }

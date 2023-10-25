@@ -7,6 +7,7 @@ export class Player implements IPlayer {
     nationality: string;
     poste: string;
     image: string;
+    description: string;
   
     constructor(
       id: number,
@@ -14,13 +15,14 @@ export class Player implements IPlayer {
       age: number,
       nationality: string,
       poste: string,
-      image: string
+      image: string, description: string
     ) {
       this.id = id;
       this.name = name;
       this.age = age;
       this.nationality = nationality,
       this.poste = poste,
-      this.image = image;
+      this.image = image,
+      this.description = description
     }
   }

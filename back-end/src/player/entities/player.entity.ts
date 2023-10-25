@@ -28,4 +28,7 @@ export class Player implements IPlayer {
 
   @Column()
   image: string;
+
+  @Column()
+  description: string;
 }

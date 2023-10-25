@@ -19,6 +19,24 @@
       />
       <!-- Wrapper | For this page - !!ignore-->
 
+      <!-- Card bootstrap -->
+      <div class="card" style="width: 18rem;">
+        <img [src]="player.image" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{player.name}}</h5>
+          <p class="card-text">{{player.description}}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Âge: {{player.age }}</li>
+          <li class="list-group-item">Nationalité: {{player.nationality}}</li>
+          <li class="list-group-item">Poste: {{player.poste}}</li>
+        </ul>
+        <div class="card-body">
+          <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a>
+        </div>
+      </div>
+
       <!-- *** fut-player-card ***-->
       <div class="fut-player-card">
         <!-- Player Card Top-->

@@ -1,0 +1,46 @@
+<app-header></app-header>
+<div class="container h-100 mt-5">
+  <div class="row h-100 justify-content-center align-items-center">
+    <div class="col-10 col-md-8 col-lg-6">
+      <form [formGroup]="playerForm">
+        <div class="mb-3">
+          <label for="name" class="form-label">Name </label>
+          <input type="text" class="form-control" id="name" formControlName="name" />
+          <small *ngIf="playerForm.get('name')?.invalid && playerForm.get('name')?.touched" class="text-danger">Name is
+            required</small>
+        </div>
+        <div class="mb-3">
+          <label for="age" class="form-label">Age </label>
+          <input type="number" class="form-control" id="age" formControlName="age" />
+          <small *ngIf="playerForm.get('age')?.invalid && playerForm.get('age')?.touched" class="text-danger">Age is
+            required</small>
+        </div>
+        <div class="mb-3">
+          <label for="nationality" class="form-label">Nationality</label>
+          <input type="text" class="form-control" id="nationality" formControlName="nationality" />
+          <small *ngIf="playerForm.get('nationality')?.invalid && playerForm.get('nationality')?.touched"
+            class="text-danger">Nationality is required</small>
+        </div>
+        <div class="mb-3">
+          <label for="image" class="form-label">Image (URL) </label>
+          <input type="text" class="form-control" id="image" formControlName="image" />
+          <small *ngIf="playerForm.get('image')?.invalid && playerForm.get('image')?.touched" class="text-danger">Image
+            is required</small>
+        </div>
+        <div class="mb-3">
+          <label for="poste" class="form-label">Poste</label>
+          <input type="text" class="form-control" id="poste" formControlName="poste" />
+          <small *ngIf="playerForm.get('poste')?.invalid && playerForm.get('poste')?.touched" class="text-danger">Poste
+            is required</small>
+        </div>
+        <button type="submit" class="btn btn-success me-2" (click)="onSubmit()">Valider</button>
+        <button type="submit" class="btn btn-danger me-2" (click)="deletePlayer()">Delete player</button>
+
+        <button type="button" class="btn btn-dark" [routerLink]="['/player']">
+          Cancel
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

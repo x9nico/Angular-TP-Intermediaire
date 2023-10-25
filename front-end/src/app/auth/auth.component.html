@@ -1,0 +1,31 @@
+<app-header></app-header>
+<div class="container h-100 mt-5">
+  <div class="row h-100 justify-content-center align-items-center">
+    <div class="col-10 col-md-8 col-lg-6">
+      <form [formGroup]="loginForm" (ngSubmit)="login()">
+        <div class="mb-3">
+          <label for="username" class="form-label">Username</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            formControlName="username"
+          />
+          <small *ngIf="loginForm.get('username')?.invalid && loginForm.get('username')?.touched"class="text-danger">Username is required</small>
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input
+            type="text"
+            class="form-control"
+            id="password"
+            formControlName="password"
+          />
+          <small *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched"class="text-danger">Password is required</small>
+        </div>
+        <button type="submit" class="btn btn-success me-2">Connexion</button>
+      </form>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

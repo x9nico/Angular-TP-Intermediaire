@@ -1,7 +1,7 @@
 import { Player } from "src/player/entities/player.entity"
 import { User } from "src/user/user.entity"
 import {createUsersTable1679933977703} from "../migrations/1679933977703-create_users_table"
-
+import { addDescriptionToCard1698239285966 } from "migrations/1698239285966-add_description_to_card"
 
 export const dbProperties: any = ({
     type: 'mysql',
@@ -12,8 +12,7 @@ export const dbProperties: any = ({
     database: 'test',
     synchronize: false,
     logging: false,
-    migrations:[createUsersTable1679933977703],
+    migrations:[createUsersTable1679933977703, addDescriptionToCard1698239285966],
     entities: [User, Player],
     subscribers:[],
-
 })

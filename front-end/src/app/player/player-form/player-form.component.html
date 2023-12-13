@@ -22,7 +22,7 @@
             class="text-danger">Nationality is required</small>
         </div>
         <div class="mb-3">
-          <label for="image" class="form-label">Image (URL) </label>
+          <label for="image" class="form-label">Image (URL): 300 x 200 </label>
           <input type="text" class="form-control" id="image" formControlName="image" />
           <small *ngIf="playerForm.get('image')?.invalid && playerForm.get('image')?.touched" class="text-danger">Image
             is required</small>

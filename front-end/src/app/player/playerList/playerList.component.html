@@ -11,7 +11,7 @@
     </button>
   </div>
   <div class="d-flex row justify-content-around">
-    <div *ngFor="let player of playerList" class="col m4 s6" (click)="onSelectPlayer(player)">
+    <div *ngFor="let player of playerList" class="col m4 s6">
       <!-- Font | Optional-->
       <link
         rel="stylesheet"
@@ -20,7 +20,7 @@
       <!-- Wrapper | For this page - !!ignore-->
 
       <!-- Card bootstrap -->
-      <div class="card" style="width: 18rem;">
+      <div class="card" style="width: 18rem;" (click)="onSelectPlayer(player)">
         <div class="card-image">
           <img [src]="player.image" class="card-img-top" alt="...">
         </div>
@@ -42,5 +42,3 @@
   </div>
  
 </div>
-
-<app-footer></app-footer>

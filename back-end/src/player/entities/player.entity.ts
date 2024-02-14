@@ -7,7 +7,7 @@ import {
   OneToOne,
   PrimaryGeneratedColumn,
 } from 'typeorm';
-import { IPlayer } from '../../../../shared/interfaces/player.inferface';
+import { IPlayer } from '@shared';
 
 @Entity()
 export class Player implements IPlayer {

@@ -16,7 +16,7 @@ Pour installer le projet dans votre environnement, il faut avant tout connecter 
 
 Pour cela, dans le dossier `/backend/properties`, effectuez une copie du fichier `db.properties.example` en `db.properties` (avec le contenu à l'identique).
 
-Ensuite, ajustez les identifiants dans le fichier avec vos identifiants de bases de données en local depuis la ligne 9 jusqu'à 13 (Le fichier est indiqué dans le .gitignore pour éviter les conflits de fichiers en groupe)).
+Ensuite, ajustez les identifiants dans le fichier avec vos identifiants de bases de données en local depuis la ligne 9 jusqu'à 13 (Le fichier est indiqué dans le .gitignore pour éviter les conflits de fichiers en groupe).
 
 #### Exécution des migrations (back-end)
 

@@ -2,25 +2,18 @@
 <h1 class="text-center mt-4">Liste d'alcoolos</h1>
 <div class="container text-center mt-4">
   <div class="w-30">
-    <button
-      type="button"
-      class="btn btn-primary"
-      [routerLink]="['/player/create']"
-    >
+    <button type="button" class="btn btn-primary" [routerLink]="['/player/create']">
       Add alcoolo
     </button>
   </div>
   <div class="d-flex row justify-content-around">
     <div *ngFor="let player of playerList" class="col m4 s6">
       <!-- Font | Optional-->
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Saira+Semi+Condensed:300,400,700"
-      />
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Saira+Semi+Condensed:300,400,700" />
       <!-- Wrapper | For this page - !!ignore-->
 
       <!-- Card bootstrap -->
-      <div class="card" style="width: 18rem;" (click)="onSelectPlayer(player)">
+      <div class="card mt-3 mb-3" style="width: 18rem;" (click)="onSelectPlayer(player)">
         <div class="card-image">
           <img [src]="player.image" class="card-img-top" alt="...">
         </div>
@@ -34,7 +27,7 @@
           <li class="list-group-item">Poste: {{player.poste}}</li>
         </ul>
       </div>
-    
+
+    </div>
+
   </div>
- 
-</div>

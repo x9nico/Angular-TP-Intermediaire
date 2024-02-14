@@ -14,7 +14,7 @@ Un projet développé en NestJS (back-end), Angular (front-end), avec une bases 
 
 Pour installer le projet dans votre environnement, il faut avant tout connecter le projet back-end à la bases de données.
 
-Pour cela, dans le dossier `/backend/properties`, effectuez une copie du fichier `db.properties.example` en `db.properties` (avec le contenu à l'identique).
+Pour cela, dans le dossier `/backend/properties`, effectuez une copie du fichier `db.properties.example` en `db.properties.ts` (avec le contenu à l'identique).
 
 Ensuite, ajustez les identifiants dans le fichier avec vos identifiants de bases de données en local depuis la ligne 9 jusqu'à 13 (Le fichier est indiqué dans le .gitignore pour éviter les conflits de fichiers en groupe)).
 
